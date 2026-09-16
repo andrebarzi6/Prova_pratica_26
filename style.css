@@ -1,14 +1,14 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
 }
-
-img{
+ 
+img {
+    display: inline-block;
     max-width: 100%;
 }
-
+ 
 @font-face {
   font-family: "Mona Sans";
   src: url("assets/fonts/mona-sans.woff2") format("woff2");
@@ -23,41 +23,87 @@ img{
   font-display: swap;
   font-feature-settings: "liga" 0;
 }
-
+ 
 :root {
     --font-body: "Mona Sans";
+    --font-mono: "Mona Sans Mono";
     --color-black: #000;
     --color-white: #fff;
-    --color-border-muted: #191f1b;
+    --color-muted: #A4AEA6;
+    --color-border-muted: #191F1B;
+    --color-cursor: #5fed83;
     --container-width: 1280px;
     --spacing-64: 64px;
-
-
+    --heading-1-line-height: 56px;
+    --heading-1-line-height: 1.1;
+    --text-200-font-size: 16px;
+    --text-200-line-height: 1.5;
 }
-
+ 
 body {
     font-family: var(--font-body);
 }
-
+ 
 .hero {
-    background-color: var(--color-black);
+    background: var(--color-black);
     color: var(--color-white);
+    text-align: center;
+    --hero-text-max-width: 600px;
 }
-
-.hero-content{
+ 
+.container {
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+.hero-content {
     padding: var(--spacing-64);
     border-left: 1px solid var(--color-border-muted);
     border-right: 1px solid var(--color-border-muted);
+    display: flex;
+    flex-direction: column;
+}
+ 
+.eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-muted);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.42em;
 }
 
-.container {
-    max-width: var(--container-width);
-    margin-left: 0;
-    margin-right: 0;
+.eyebrow-cursor rect {
+    fill: var(--color-cursor);
 }
 
-.int{
-    text-align: center;
-    font-family: "mona sans mono";
-    
+
+.heading{
+    font-weight: 400;
+
+}
+
+.heading-size-1 {
+    font-size: var(--heading-1-line-height);
+}
+
+.text-size-200 {
+    font-size: var(--text-200-font-size);
+    line-height: var(--text-200-line-height);
+}
+
+.hero-text{
+    max-width: var(--hero-text-max-width);
+}
+
+.button-group {
+    display: flex;
+    gap: 1em;
+}
+
+.hero-image{
+    margin-top: calc(6px -var(--hero-content-gap))
 }
