@@ -4,32 +4,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prova Pratica Marco Escher</title>
+  <title>Prova Pratica Andrea Barzaghi</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <header></header>
-  <main>
+  <a class="skip-link" href="#top">Vai al contenuto</a>
+  <header class="navigation">
+    <div class="navigation-content">
+      <div class="navigation-brand">
+        <a class="navigation-logo" href="https://github.com/education" aria-label="GitHub Education">
+          <span class="navigation-back-arrow" aria-hidden="true"></span>
+          <img src="assets/images/github-mark.svg" width="24" height="24" alt="" />
+        </a>
+        <a class="navigation-title" href="#top">GitHub <span>Student Stories</span></a>
+      </div>
+      <div class="navigation-menu">
+        <button class="navigation-toggle" type="button" aria-label="Menu dei capitoli" popovertarget="navigation-panel">
+          <img class="navigation-icon navigation-icon-open" src="assets/images/menu.svg" width="16" height="16" alt="" aria-hidden="true" />
+          <img class="navigation-icon navigation-icon-close" src="assets/images/close.svg" width="16" height="16" alt="" aria-hidden="true" />
+          <span class="navigation-label">Menu dei capitoli</span>
+        </button>
+        <nav id="navigation-panel" class="navigation-panel" popover="auto" aria-label="Capitoli della storia">
+          <ul class="navigation-list">
+          <li><a href="#concept"><span>Concept</span></a></li>
+          <li><a href="#sitemap"><span>Sitemap</span></a></li>
+          <li><a href="#assets"><span>Assets</span></a></li>
+          <li><a href="#prototipi"><span>Prototipi</span></a></li>
+          <li><a href="#highlights"><span>Highlights</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="top" tabindex="-1">
     <section class="hero">
       <div class="hero-content container">
         <p class="eyebrow">
-          Danilo Morgagni · UI/UX Design · 2026
+          Andrea Barzaghi · UI/UX Design · 2026
           <svg class="eyebrow-cursor" width="8" height="10" viewBox="0 0 8 10" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <rect width="8" height="10" fill="#5FED83" />
           </svg>
         </p>
-        <h1 class="heading heading-size-1">Sentcell. Dare forma a una scienza complessa.</h1>
-        <p class="hero-text text text-size-200">Come dare accesso a una scienza complessa? La mia
-          reinterpretazione<br>didattica di Sentcell parte dai livelli
-          di lettura.</p>
+        <h1 class="heading heading-size-1">Dunk SB Archive. La collezione più rara e preziosa.</h1>
+        <p class="hero-text text text-size-200">Come raccontare una cultura attraverso le scarpe? Il mio archivio visivo della 
+          nike Dunk SB parte della storia e dai modelli più rari per costruire</p>
         <div class="button-group">
           <a href="#storia" class="button button-primary">Leggi la storia</a>
           <a href="#elaborati" class="button button-secondary">Esplora gli elaborati</a>
         </div>
-        <img class="hero-image" src="assets/images/sentcell-home.webp" alt="screenshot desktop della home di sentcell">
+        <img class="hero-image" src="assets/images/dunk sfondo.jpeg" alt="screenshot desktop della home di sentcell">
       </div>
+    </section>
+
+        <section class="subtitle">
+      <div class="biography-content">
+        <p class="name">Andrea Barzaghi</p>
+        <p class="title">•</p>
+        <p class="title">ITS Web Design e Strategie Digitali</p>
+        <p class="title">•</p>
+        <p class="title">UI/UX Design</p>
+        <p class="title">•</p>
+        <p class="title">2026</p>
+      </div>
+      
+    
+    
+
+
+
     </section>
   </main>
   <footer></footer>
