@@ -9,6 +9,8 @@ img {
     max-width: 100%;
 }
 
+
+
 @font-face {
   font-family: "Mona Sans";
   src: url("assets/fonts/mona-sans.woff2") format("woff2");
@@ -24,8 +26,6 @@ img {
   font-feature-settings: "liga" 0;
 }
 
-
-
 :root {
     --font-body: "Mona Sans";
     --font-mono: "Mona Sans Mono";
@@ -38,8 +38,19 @@ img {
     --color-button-secondary-bg: rgba(255, 255, 255, 0.12);
     --color-button-secondary-border: rgba(255, 255, 255, 0.06);
     --color-focus: #3094ff;
+    --color-accent: #08872B;
     --container-width: 1280px;
+    
+    /* Spaziature */
+    --spacing-12: 12px;
+    --spacing-16: 16px;
+    --spacing-24: 24px;
+    --spacing-32: 32px;
+    --spacing-40: 40px;
+    --spacing-48: 48px;
     --spacing-64: 64px;
+
+    /* Tipografia Hero & Generica */
     --heading-1-font-size: 56px;
     --heading-1-line-height: 1.1;
     --eyebrow-font-size: 14px;
@@ -47,6 +58,18 @@ img {
     --text-200-line-height: 1.5;
     --text-100-font-size: 0.875em;
     --text-100-line-height: 1.5;
+
+    /* Tipografia Sezione Case Study (Passo 1) */
+    --heading-4-font-size: 28px;
+    --heading-4-font-weight: 550;
+    --heading-4-line-height: 1.2;
+    --text-350-font-size: 15px;
+    --text-350-line-height: 1.5;
+
+    /* Icone */
+    --icon-size: 1em;
+    --icon-color: currentColor;
+
     --font-weight-medium: 500;
     --font-weight-semibold: 550;
     --border-width: 1px;
@@ -69,6 +92,132 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* --- UTILITY & DESIGN SYSTEM TOKENS --- */
+.heading-size-4 {
+    font-size: var(--heading-4-font-size);
+    font-weight: var(--heading-4-font-weight);
+    line-height: var(--heading-4-line-height);
+    text-wrap: balance;
+}
+
+.text-size-200 {
+    font-size: 17px;
+    line-height: var(--text-200-line-height);
+}
+
+.text-size-350 {
+    font-size: var(--text-350-font-size);
+    line-height: var(--text-350-line-height);
+}
+
+.text-size-300 {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.text-size-400 {
+    font-size: 28px;
+    line-height: 1.5;
+}
+
+.color-muted {
+    color: var(--color-muted);
+}
+
+.border-inline {
+    border-inline: var(--border-width) solid var(--color-border-muted);
+}
+
+.border-block {
+    border-block: var(--border-width) solid var(--color-border-muted);
+}
+
+.border-top {
+    border-top: var(--border-width) solid var(--color-border-muted);
+}
+
+.icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    fill: var(--icon-color);
+    flex-shrink: 0;
+}
+
+/* --- TEMA CHIARO --- */
+.theme-light {
+    --color-muted: #57605A;
+    --color-border-muted: #E1E6E2;
+    --color-cursor: #08872B;
+    --color-focus: #0969DA;
+    --color-accent: #08872B;
+
+    color: var(--color-black);
+    background: var(--color-white);
+}
+
+.features-section {
+    background-color: var(--color-bg-light);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-40) var(--spacing-32);
+    gap: 1rem;
+}
+
+/* Divisori per mobile */
+.feature-card + .feature-card {
+    border-top: var(--border-width) solid var(--color-border-muted);
+}
+
+.feature-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1.5rem;
+}
+
+.feature-icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.feature-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--color-text-main);
+}
+
+.feature-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-muted);
+}
+
+/* Layout Desktop a 3 colonne con righe verticali divisorie */
+@media (min-width: 900px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .feature-card {
+        padding: var(--spacing-64) var(--spacing-40);
+    }
+
+    .feature-card + .feature-card {
+        border-top: none;
+        border-left: var(--border-width) solid var(--color-border-muted);
+    }
+}
+
+/* --- HERO SECTION --- */
 .hero {
     --hero-text-max-width: 600px;
     --hero-content-gap: 1em;
@@ -94,6 +243,95 @@ body {
     gap: var(--hero-content-gap);
 }
 
+.case-study-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-40);
+    padding: var(--spacing-40) var(--spacing-32);
+}
+
+.case-study-intro {
+    align-items: flex-start;
+    text-align: left;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Stili specifici della Sidebar */
+.case-study-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-32);
+    border-top: var(--border-width) solid var(--color-border-muted);
+    padding-top: var(--spacing-24);
+}
+
+.sidebar-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.sidebar-title {
+    font-size: 1.25rem;
+    font-weight: 550;
+    line-height: 1.2;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar-nav a {
+    color: var(--color-muted);
+    text-decoration: none;
+    font-size: var(--text-350-font-size);
+    transition: color 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+    color: var(--color-black);
+}
+
+.sidebar-text {
+    font-size: var(--text-350-font-size);
+    color: var(--color-muted);
+}
+
+.sidebar-link {
+    color: #0969DA;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--text-350-font-size);
+}
+
+.sidebar-link:hover {
+    text-decoration: underline;
+}
+
+/* Layout per Schermi Desktop (min-width: 1000px) */
+@media (min-width: 1000px) {
+    .case-study-header {
+        display: grid;
+        grid-template-columns: 1fr 280px; /* Colonna contenuto + Colonna sidebar */
+        gap: var(--spacing-64);
+        align-items: start;
+    }
+
+    .case-study-sidebar {
+        border-top: none;
+        padding-top: 0;
+        border-left: var(--border-width) solid var(--color-border-muted);
+        padding-left: var(--spacing-32);
+    }
+}
+
 .eyebrow {
     font-size: var(--eyebrow-font-size);
     font-family: var(--font-mono);
@@ -107,9 +345,8 @@ body {
 }
 
 .subtitle {
-    font-size: 20px;
+    font-size: 17px;
     line-height: 100px;
-    
 }
 
 .eyebrow-cursor rect {
@@ -125,10 +362,11 @@ body {
     line-height: var(--heading-1-line-height);
 }
 
-.text-size-200 {
-    font-size: var(--text-200-font-size);
-    line-height: var(--text-200-line-height);
+.heading-size-4 {
+    font-size: 35px;
+    line-height: var(--heading-4-line-height);
 }
+
 
 .hero-text {
     max-width: var(--hero-text-max-width);
@@ -139,13 +377,14 @@ body {
     gap: 1em;
 }
 
-.name{
+.name {
     font-weight: bold;
 }
 
-.biography-content{
+.biography-content {
     display: flex;
-    
+    justify-content: center;
+    gap: 0.5em;
 }
 
 .hero-image {
@@ -173,8 +412,8 @@ body {
 }
 
 .button-secondary {
-     background-color: var(--color-button-secondary-bg);
-     border-color: var(--color-button-secondary-border);
+    background-color: var(--color-button-secondary-bg);
+    border-color: var(--color-button-secondary-border);
 }
 
 .button-secondary:hover {
@@ -212,6 +451,7 @@ body {
     outline-offset: var(--focus-outline-offset);
 }
 
+/* --- NAVIGATION --- */
 .navigation {
     --navigation-height: 3.5em;
     --navigation-logo-size: 1.5em;
@@ -338,7 +578,6 @@ body {
     color: var(--color-white);
 }
 
-/* Il layout "compatto" dipende se l'attributo popover è presente (su desktop viene rimosso via JS) */
 .navigation:has(.navigation-panel[popover]) {
     height: var(--navigation-height);
 }
@@ -434,7 +673,6 @@ body {
     }
 }
 
-/* Su tablet cambia il layout, ma il popover resta attivo */
 @media (min-width: 48rem) {
     .navigation {
         --navigation-height: 4em;
@@ -443,7 +681,7 @@ body {
         --navigation-toggle-font-size: var(--text-100-font-size);
         --navigation-toggle-min-width: 6em;
         --navigation-toggle-gap: 0.5em;
-        --navigation-list-gap: 1000px;
+        --navigation-list-gap: 0.5em; /* CORRETTO DA 1000px A 0.5em */
         --navigation-list-padding: 0.5em 1em;
         --navigation-link-min-height: 2.5em;
         --navigation-link-padding: 0.5em 0.75em;
@@ -488,7 +726,6 @@ body {
     }
 }
 
-/* Su desktop JS rimuove popover e gli elementi si dispongono in linea */
 @media (min-width: 1000px) {
     .navigation {
         --navigation-inline-list-padding: 0 0 0 1em;
@@ -538,3 +775,85 @@ body {
     }
 }
 
+/* --- SEZIONE CASE STUDY (BREAKOUT TABS / ACCORDION) --- */
+.case-study-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 40em;
+    margin: 0 0 0 45px;
+    padding: var(--spacing-40) 0;
+    gap: 2em;
+}
+
+.breakdownTabs {
+    padding: var(--spacing-40) 0;
+}
+
+.breakdownTabs-preview {
+    text-align: center;
+    margin-bottom: var(--spacing-32);
+}
+
+.breakdownTabs-preview img {
+    max-width: 100%;
+    height: auto;
+}
+
+.breakdownTabs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breakdownTabs-item {
+    border-bottom: var(--border-width) solid var(--color-border-muted);
+}
+
+.breakdownTabs-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    padding: 1rem 0;
+    cursor: pointer;
+    text-align: left;
+    font: inherit;
+    color: inherit;
+}
+
+.breakdownTabs-panel {
+    padding-bottom: 1rem;
+}
+
+.breakdownTabs-panel[hidden] {
+    display: none;
+}
+
+@media (min-width: 1000px) {
+    .breakdownTabs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .breakdownTabs-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-40);
+    }
+
+    .breakdownTabs-panel[hidden] {
+        display: block !important;
+    }
+
+    .breakdownTabs-trigger svg.triangle-down {
+        display: none;
+    }
+
+    .breakdownTabs-item.is-active {
+        border-top: 2px solid var(--color-accent);
+    }
+}

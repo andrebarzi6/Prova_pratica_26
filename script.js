@@ -1,3 +1,7 @@
+// ==========================================
+// 1. NAVIGAZIONE RESPONSIVE E POPOVER
+// ==========================================
+
 // Per il desktop troviamo gli elementi e leggiamo la larghezza
 const navigationButton = document.querySelector('.navigation-toggle');
 const navigationLabel = document.querySelector('.navigation-label');
@@ -13,6 +17,7 @@ function updateNavigationLabel() {
   navigationButton.setAttribute('aria-label', text);
   navigationLabel.textContent = text;
 }
+
 function updateNavigationLayout() {
   if (desktopMedia.matches) { // Siamo su desktop, disattiva il popover!
     navigationButton.removeAttribute('popovertarget');
@@ -25,6 +30,7 @@ function updateNavigationLayout() {
   }
   updateNavigationLabel();
 }
+
 if (supportsNavigation) {
   navigationPanel.addEventListener('toggle', updateNavigationLabel);
   updateNavigationLayout();
@@ -44,9 +50,14 @@ navigationPanel.addEventListener('click', function (event) {
   if (supportsNavigation && navigationPanel.matches(':popover-open')) navigationPanel.hidePopover();
   // Il link continua ad aggiornare il frammento e a scorrere con il comportamento HTML.
 });
-document.querySelector('.skip-link').addEventListener('click', function () {
-  document.querySelector('#top').focus();
-});
+
+const skipLink = document.querySelector('.skip-link');
+if (skipLink) {
+  skipLink.addEventListener('click', function () {
+    const topElement = document.querySelector('#top');
+    if (topElement) topElement.focus();
+  });
+}
 
 // Bonus accessibilità: se cambia il breakpoint, manteniamo il focus dove serve
 desktopMedia.addEventListener('change', function () {
@@ -56,6 +67,49 @@ desktopMedia.addEventListener('change', function () {
   const focusOnButton = focused === navigationButton;
   updateNavigationLayout();
   if (desktopMedia.matches && focusInNavigation) focused.focus();
-  else if (desktopMedia.matches && focusOnButton) navigationPanel.querySelector('a').focus();
+  else if (desktopMedia.matches && focusOnButton) navigationPanel.querySelector('a')?.focus();
   else if (!desktopMedia.matches && focusInNavigation) navigationButton.focus();
+});
+
+
+// ==========================================
+// 2. SEZIONE CASE STUDY (BREAKOUT TABS / ACCORDION)
+// ==========================================
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.breakdownTabs-trigger');
+  const items = document.querySelectorAll('.breakdownTabs-item');
+  const mainImage = document.getElementById('breakdown-image');
+
+  if (!tabs.length) return;
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const parentItem = tab.closest('.breakdownTabs-item');
+      const targetPanelId = tab.getAttribute('aria-controls');
+      const targetPanel = document.getElementById(targetPanelId);
+      const newImageSrc = tab.getAttribute('data-image');
+
+      // 1. Aggiorna l'immagine della preview
+      if (mainImage && newImageSrc) {
+        mainImage.setAttribute('src', newImageSrc);
+      }
+
+      // 2. Resetta lo stato di tutti gli item/schede
+      items.forEach((item) => item.classList.remove('is-active'));
+      tabs.forEach((t) => {
+        t.setAttribute('aria-expanded', 'false');
+        const pId = t.getAttribute('aria-controls');
+        const pEl = document.getElementById(pId);
+        if (pEl) pEl.setAttribute('hidden', '');
+      });
+
+      // 3. Attiva la scheda/accordion cliccata
+      if (parentItem) parentItem.classList.add('is-active');
+      tab.setAttribute('aria-expanded', 'true');
+      if (targetPanel) {
+        targetPanel.removeAttribute('hidden');
+      }
+    });
+  });
 });
