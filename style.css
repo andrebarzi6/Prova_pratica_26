@@ -41,7 +41,6 @@ img {
     --color-accent: #08872B;
     --container-width: 1280px;
     
-    /* Spaziature */
     --spacing-12: 12px;
     --spacing-16: 16px;
     --spacing-24: 24px;
@@ -50,7 +49,6 @@ img {
     --spacing-48: 48px;
     --spacing-64: 64px;
 
-    /* Tipografia Hero & Generica */
     --heading-1-font-size: 56px;
     --heading-1-line-height: 1.1;
     --eyebrow-font-size: 14px;
@@ -59,14 +57,12 @@ img {
     --text-100-font-size: 0.875em;
     --text-100-line-height: 1.5;
 
-    /* Tipografia Sezione Case Study (Passo 1) */
     --heading-4-font-size: 28px;
     --heading-4-font-weight: 550;
     --heading-4-line-height: 1.2;
     --text-350-font-size: 15px;
     --text-350-line-height: 1.5;
 
-    /* Icone */
     --icon-size: 1em;
     --icon-color: currentColor;
 
@@ -92,7 +88,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* --- UTILITY & DESIGN SYSTEM TOKENS --- */
+
 .heading-size-4 {
     font-size: var(--heading-4-font-size);
     font-weight: var(--heading-4-font-weight);
@@ -143,7 +139,7 @@ body {
     flex-shrink: 0;
 }
 
-/* --- TEMA CHIARO --- */
+
 .theme-light {
     --color-muted: #57605A;
     --color-border-muted: #E1E6E2;
@@ -201,7 +197,7 @@ body {
     color: var(--color-muted);
 }
 
-/* Layout Desktop a 3 colonne con righe verticali divisorie */
+
 @media (min-width: 900px) {
     .features-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -217,7 +213,7 @@ body {
     }
 }
 
-/* --- HERO SECTION --- */
+
 .hero {
     --hero-text-max-width: 600px;
     --hero-content-gap: 1em;
@@ -258,7 +254,6 @@ body {
     padding: 0;
 }
 
-/* Stili specifici della Sidebar */
 .case-study-sidebar {
     display: flex;
     flex-direction: column;
@@ -315,7 +310,7 @@ body {
     text-decoration: underline;
 }
 
-/* Layout per Schermi Desktop (min-width: 1000px) */
+
 @media (min-width: 1000px) {
     .case-study-header {
         display: grid;
@@ -775,7 +770,7 @@ body {
     }
 }
 
-/* --- SEZIONE CASE STUDY (BREAKOUT TABS / ACCORDION) --- */
+
 .case-study-intro {
     display: flex;
     flex-direction: column;
@@ -855,5 +850,151 @@ body {
 
     .breakdownTabs-item.is-active {
         border-top: 2px solid var(--color-accent);
+    }
+}
+/* ==========================================
+   SEZIONE: THE STORY OF THE NIKE DUNK
+   ========================================== */
+
+.story-section {
+    position: relative;
+    background-image: url('assets/images/Skate-background.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: var(--color-white);
+    overflow: hidden;
+}
+
+/* Overlay per oscurare lo sfondo e rendere leggibili i testi */
+.story-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 12, 0.72); /* Regola l'opacità se vuoi lo sfondo più o meno scuro */
+    z-index: 1;
+}
+
+.story-container {
+    position: relative;
+    z-index: 2;
+    padding-top: var(--spacing-64);
+    padding-bottom: var(--spacing-64);
+}
+
+.story-header {
+    margin-bottom: var(--spacing-40);
+}
+
+.story-main-title {
+    font-size: clamp(42px, 6.5vw, 76px);
+    font-weight: 500;
+    line-height: 1.05;
+    color: #f5cf47; /* Giallo acceso del titolo */
+    letter-spacing: -0.02em;
+    max-width: 700px;
+}
+
+/* Griglia layout: Collezione vs Testi */
+.story-body-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-40);
+    align-items: start;
+    margin-bottom: var(--spacing-64);
+}
+
+.story-collection-col {
+    width: 100%;
+}
+
+.story-collection-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.story-collection-img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 4px;
+    display: block;
+}
+
+.story-caption {
+    font-size: 13px;
+    color: #e63946;
+    font-family: var(--font-mono);
+}
+
+.story-subtitle {
+    font-size: clamp(34px, 4.5vw, 56px);
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-24);
+    letter-spacing: -0.01em;
+}
+
+.story-paragraph {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #d1d5db;
+    margin-bottom: var(--spacing-20);
+    max-width: 540px;
+}
+
+.story-paragraph strong {
+    color: #ffffff;
+}
+
+.highlight-red {
+    color: #e63946 !important;
+}
+
+/* Sezione Inferiore Colorways */
+.story-colorways-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: var(--spacing-32);
+}
+
+.story-colorways-image-wrapper {
+    width: 100%;
+    max-width: 850px;
+    margin-bottom: var(--spacing-20);
+}
+
+.story-colorways-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.story-colorways-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 2.2rem;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-32);
+    width: 100%;
+    max-width: 850px;
+    justify-content: space-between;
+}
+
+.story-footer-text {
+    font-size: 15px;
+    color: #a4aea6;
+    max-width: 650px;
+    line-height: 1.5;
+}
+
+/* Desktop Breakpoint */
+@media (min-width: 900px) {
+    .story-body-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-64);
     }
 }
