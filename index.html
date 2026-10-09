@@ -32,8 +32,8 @@
             <li><a href="#concept"><span>Concept</span></a></li>
             <li><a href="#sitemap"><span>Sitemap</span></a></li>
             <li><a href="#assets"><span>Assets</span></a></li>
-            <li><a href="#prototipi"><span>Prototipi</span></a></li>
             <li><a href="#highlights"><span>Highlights</span></a></li>
+            <li><a href="#case-study"><span>Case Study</span></a></li>
           </ul>
         </nav>
       </div>
@@ -55,7 +55,7 @@
           Come raccontare una cultura attraverso le scarpe? Il mio archivio visivo della Nike Dunk SB parte dalla storia e dai modelli più rari per costruire un'esperienza di consultazione.
         </p>
         <div class="button-group">
-          <a href="#questa-pagina" class="button button-primary">Leggi la storia</a>
+          <a href="#concept" class="button button-primary">Leggi la storia</a>
           <a href="#elaborati" class="button button-secondary">Esplora gli elaborati</a>
         </div>
         
@@ -78,8 +78,8 @@
       </div>
     </section>
 
-    <!-- SEZIONE CASE STUDY PRINCIPALE -->
-    <section id="questa-pagina" class="theme-light border-top" aria-labelledby="questa-pagina-title">
+    <!-- 1. SEZIONE CONCEPT -->
+    <section id="concept" class="theme-light border-top" aria-labelledby="concept-title">
       <header class="container border-inline case-study-header">
         <div class="case-study-intro">
           <p class="eyebrow">
@@ -88,7 +88,7 @@
             </svg>
             Concept
           </p>
-          <h2 id="questa-pagina-title" class="heading heading-size-4">
+          <h2 id="concept-title" class="heading heading-size-4">
             Una cultura, più livelli di lettura
           </h2>
           <p class="text-size-200 color-muted">
@@ -109,6 +109,17 @@
         </div>
 
         <aside class="case-study-sidebar">
+          <div class="sidebar-group">
+            <h3 class="sidebar-title">In questa storia</h3>
+            <ul class="sidebar-nav">
+              <li><a href="#concept">Concept</a></li>
+              <li><a href="#sitemap">Sitemap</a></li>
+              <li><a href="#assets">Assets</a></li>
+              <li><a href="#highlights">Highlights</a></li>
+              <li><a href="#case-study">Case Study</a></li>
+            </ul>
+          </div>
+
           <div class="sidebar-group">
             <h3 class="sidebar-title">Gli elaborati</h3>
             <p class="sidebar-text">Dal racconto alle tavole del progetto.</p>
@@ -152,69 +163,127 @@
           <p class="feature-desc color-muted">Accedere ai modelli più rari e ai riferimenti di valore.</p>
         </article>
       </div>
+    </section>
 
-      <!-- SEZIONE ANCHE QUESTA PAGINA È UN PROGETTO -->
-      <div class="container border-inline project-section-intro">
-        <p class="eyebrow">
-          Dal progetto al case study
-        </p>
-        <h2 class="heading heading-size-4">
-          Anche questa pagina è un progetto
-        </h2>
-        <p class="text-size-200 color-muted">
-          Per documentare bene servono scelte di design: la gerarchia visiva, le componenti interattive e la pubblicazione del codice su GitHub Pages.
-        </p>
-      </div>
+    <!-- 2. SEZIONE SITEMAP (NOMINALE VUOTA) -->
+    <section id="sitemap" class="empty-section theme-light border-top">
+      <div class="container border-inline empty-section-container"></div>
+    </section>
 
-      <!-- BREAKOUT TABS / ACCORDION MODULE -->
-      <div class="breakdownTabs container border-inline">
-        <div class="breakdownTabs-preview">
-          <img id="breakdown-image" class="breakdownTabs-img" src="assets/images/sentcell-home.webp" alt="Anteprima del progetto" />
+    <!-- 3. SEZIONE ASSETS (NOMINALE VUOTA) -->
+    <section id="assets" class="empty-section theme-light border-top">
+      <div class="container border-inline empty-section-container"></div>
+    </section>
+
+    <!-- 4. SEZIONE HIGHLIGHTS (NOMINALE VUOTA) -->
+    <section id="highlights" class="empty-section theme-light border-top">
+      <div class="container border-inline empty-section-container"></div>
+    </section>
+
+    <!-- 5. SEZIONE CASE STUDY (BREAKOUT TABS IDENTICHE A INDEX_6.HTML) -->
+    <section id="case-study" class="section case-study theme-light border-top">
+      <div class="container case-study-container border-inline">
+        <div class="case-study-heading">
+          <p class="eyebrow-text">FROM PROJECT TO CASE STUDY <svg width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="8" height="10" fill="#08872B" />
+            </svg> </p>
+          <h2 class="heading-size-3">Questa pagina è anche un progetto</h2>
+          <p class="body">Per documentare bene servono scelte di design: la gerarchia visiva, le componenti interattive e la pubblicazione del codice su GitHub Pages.</p>
         </div>
+        
+        <div class="case-study-content">
+          <div class="tabs-images">
+            <img class="tabs-image is-visible" src="assets/images/sentcell-home.webp" alt="Studiare il sistema">
+            <img class="tabs-image" src="assets/images/sentcell-home-mobile.webp" alt="Comporre la pagina">
+            <img class="tabs-image" src="assets/images/sentcell-home.webp" alt="Verificare il risultato">
+          </div>
+          
+          <div class="tabs-container">
+            <!-- TAB 1 -->
+            <div class="tab is-selected">
+              <button class="tab-button" type="button">
+                <div class="line">
+                  <svg class="line-svg" viewBox="0 0 359 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="1" fill="#E4EBE6" />
+                  </svg>
+                </div>
+                <div class="tab-header">
+                  <div class="icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.24731 1.875C7.55244 1.875 8.7026 2.54213 9.37427 3.55371C10.0459 2.54218 11.195 1.875 12.5002 1.875H18.7502C19.0954 1.87504 19.3752 2.15485 19.3752 2.5V15.0518C19.3752 15.2181 19.3086 15.3778 19.1907 15.4951C19.0726 15.6124 18.9127 15.6778 18.7463 15.6768L12.344 15.6338C11.6753 15.6294 11.0327 15.8933 10.5598 16.3662L9.81665 17.1084C9.57256 17.3524 9.1769 17.3524 8.93286 17.1084L8.18188 16.3574C7.71309 15.8886 7.07727 15.6251 6.41431 15.625H0.000244141C-0.344934 15.625 -0.624756 15.3452 -0.624756 15V2.5C-0.624756 2.15482 -0.344934 1.875 0.000244141 1.875H6.24731ZM12.5002 3.125C11.1195 3.125 10.0002 4.24429 10.0002 5.625V15.1934C10.6661 14.6664 11.4951 14.378 12.3528 14.3838L18.1252 14.4229V3.125H12.5002ZM0.625244 14.375H6.41431C7.26695 14.375 8.08972 14.6654 8.75024 15.1914L8.74731 5.62305C8.74616 4.24315 7.62721 3.125 6.24731 3.125H0.625244V14.375Z" fill="#08872B" />
+                    </svg>
+                  </div>
+                  <span class="heading-size-4">Studiare il sistema</span>
+                  <svg class="accordion-arrow" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.44532 6.09258L0.13517 0.782424C-0.153564 0.493691 0.0509292 4.82077e-07 0.459261 4.64228e-07L11.0796 0C11.4879 -1.78487e-08 11.6924 0.493689 11.4037 0.782423L6.0935 6.09258C5.91451 6.27157 5.62431 6.27157 5.44532 6.09258Z" fill="#08872B" />
+                  </svg>
+                </div>
+              </button>
 
-        <ul class="breakdownTabs-list" role="tablist">
-          <li class="breakdownTabs-item is-active">
-            <button type="button" class="breakdownTabs-trigger" aria-expanded="true" aria-controls="tab-content-1" id="tab-1" data-image="assets/images/sentcell-home.webp">
-              <div class="tab-header-icon">
-                <img src="assets/images/libri.svg" width="24" height="24" alt="" />
+              <div class="text-tab">
+                <p class="body-small">
+                  Sono partito dalla documentazione e dalle pagine GitHub: tipografia, colori, spazi e comportamenti formano un insieme di decisioni. Ho usato Primer Brand come vocabolario per costruire la mia pagina.
+                </p>
               </div>
-              <span class="tab-title">Studiare il sistema</span>
-              <svg class="icon triangle-down" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-            </button>
-            <div id="tab-content-1" class="breakdownTabs-panel" role="region" aria-labelledby="tab-1">
-              <p class="text-size-350 color-muted">Sono partito dalla documentazione e dalle pagine GitHub: tipografia, colori, spazi e comportamenti formano un insieme di decisioni. Ho usato Primer Brand come vocabolario per costruire la mia pagina.</p>
-              <a href="#" class="tab-link">Esplora Primer Brand &rsaquo;</a>
             </div>
-          </li>
 
-          <li class="breakdownTabs-item">
-            <button type="button" class="breakdownTabs-trigger" aria-expanded="false" aria-controls="tab-content-2" id="tab-2" data-image="assets/images/sentcell-home-mobile.webp">
-              <div class="tab-header-icon">
-                <img src="assets/images/pagina.svg" width="24" height="24" alt="" />
-              </div>
-              <span class="tab-title">Comporre la pagina</span>
-              <svg class="icon triangle-down" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-            </button>
-            <div id="tab-content-2" class="breakdownTabs-panel" role="region" aria-labelledby="tab-2" hidden>
-              <p class="text-size-350 color-muted">Ho selezionato gli elaborati e dato a ogni contenuto una forma: Pillar per i livelli di lettura, Tabs per le viste, Testimonial per una riflessione. Gerarchie e spazi collegano i capitoli.</p>
-              <a href="#" class="tab-link">Rileggi le scelte nella pagina &rsaquo;</a>
-            </div>
-          </li>
+            <!-- TAB 2 -->
+            <div class="tab">
+              <button class="tab-button" type="button">
+                <div class="line">
+                  <svg class="line-svg" viewBox="0 0 359 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="1" fill="#E4EBE6" />
+                  </svg>
+                </div>
+                <div class="tab-header">
+                  <div class="icon">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.5 1.04199C18.4203 1.04203 19.1668 1.78771 19.167 2.70801V16.042C19.1668 16.9623 18.4203 17.708 17.5 17.708H8.33301C7.41276 17.7079 6.66717 16.9622 6.66699 16.042V2.70801C6.66717 1.78777 7.41276 1.04213 8.33301 1.04199H17.5ZM8.33301 2.29199C8.10311 2.29213 7.91717 2.47812 7.91699 2.70801V16.042C7.91717 16.2719 8.10311 16.4579 8.33301 16.458H17.5C17.73 16.458 17.9168 16.2719 17.917 16.042V2.708C17.9168 2.47806 17.73 2.29203 17.5 2.29199H8.33301ZM4.30371 2.56641C4.61245 2.41204 4.98821 2.53697 5.14258 2.8457C5.29672 3.15438 5.17094 3.52927 4.8623 3.68359C4.67224 3.77865 4.61637 3.83093 4.59961 3.85156C4.59586 3.85618 4.59464 3.85845 4.59277 3.86426C4.58999 3.87303 4.58304 3.90059 4.58301 3.95801V14.792C4.58303 14.8494 4.58999 14.877 4.59277 14.8857C4.59464 14.8916 4.59586 14.8938 4.59961 14.8984C4.61637 14.9191 4.67223 14.9714 4.8623 15.0664C5.17094 15.2207 5.29672 15.5956 5.14258 15.9043C4.98821 16.213 4.61245 16.338 4.30371 16.1836C4.07751 16.0705 3.82047 15.9217 3.62891 15.6855C3.41683 15.424 3.33306 15.1197 3.33301 14.792V3.95801C3.33307 3.63026 3.41683 3.32597 3.62891 3.06445C3.82047 2.82826 4.0775 2.67953 4.30371 2.56641ZM0.936523 3.83398C1.23531 3.66114 1.61818 3.76371 1.79102 4.0625C1.96355 4.36123 1.86116 4.74325 1.5625 4.91602C1.43791 4.98811 1.34867 5.05822 1.2959 5.12012C1.24995 5.17407 1.25 5.199 1.25 5.20801V13.542C1.25 13.5512 1.25025 13.5763 1.2959 13.6299C1.34867 13.6918 1.43791 13.7619 1.5625 13.834C1.86116 14.0068 1.96355 14.3888 1.79102 14.6875C1.61818 14.9861 1.23531 15.0889 0.936523 14.916C0.607438 14.7256 0.000174513 14.2973 0 13.542V5.20801C0.000174598 4.45271 0.607438 4.0244 0.936523 3.83398Z" fill="#08872B" />
+                    </svg>
+                  </div>
+                  <span class="heading-size-4">Comporre la pagina</span>
+                  <svg class="accordion-arrow" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.44532 6.09258L0.13517 0.782424C-0.153564 0.493691 0.0509292 4.82077e-07 0.459261 4.64228e-07L11.0796 0C11.4879 -1.78487e-08 11.6924 0.493689 11.4037 0.782423L6.0935 6.09258C5.91451 6.27157 5.62431 6.27157 5.44532 6.09258Z" fill="#08872B" />
+                  </svg>
+                </div>
+              </button>
 
-          <li class="breakdownTabs-item">
-            <button type="button" class="breakdownTabs-trigger" aria-expanded="false" aria-controls="tab-content-3" id="tab-3" data-image="assets/images/sentcell-home.webp">
-              <div class="tab-header-icon">
-                <img src="assets/images/pages.svg" width="24" height="24" alt="" />
+              <div class="text-tab">
+                <p class="body-small">
+                  Ho selezionato gli elaborati e dato a ogni contenuto una forma: Pillar per i livelli di lettura, Tabs per le viste, Testimonial per una riflessione. Gerarchie e spazi collegano i capitoli.
+                </p>
               </div>
-              <span class="tab-title">Verificare il risultato</span>
-              <svg class="icon triangle-down" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-            </button>
-            <div id="tab-content-3" class="breakdownTabs-panel" role="region" aria-labelledby="tab-3" hidden>
-              <p class="text-size-350 color-muted">Il lavoro continua nel browser: controllo la leggibilità, i collegamenti e i controlli da tastiera a larghezze diverse. La prova pratica richiede di saper spiegare e modificare il codice.</p>
-              <a href="#" class="tab-link">Scopri GitHub Pages &rsaquo;</a>
             </div>
-          </li>
-        </ul>
+
+            <!-- TAB 3 -->
+            <div class="tab">
+              <button class="tab-button" type="button">
+                <div class="line">
+                  <svg class="line-svg" viewBox="0 0 359 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="1" fill="#E4EBE6" />
+                  </svg>
+                </div>
+                <div class="tab-header">
+                  <div class="icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.80781 3.51698C6.05185 3.27294 6.44752 3.27303 6.6916 3.51698C6.93568 3.76106 6.93568 4.15669 6.6916 4.40077L1.71699 9.37538L6.6916 14.35C6.93568 14.5941 6.93568 14.9897 6.6916 15.2338C6.44752 15.4777 6.05185 15.4778 5.80781 15.2338L0.391799 9.81776C0.147721 9.57368 0.147721 9.17707 0.391799 8.93299L5.80781 3.51698ZM12.0578 3.51698C12.3019 3.27294 12.6975 3.27303 12.9416 3.51698L18.3586 8.93299C18.6027 9.17707 18.6027 9.57368 18.3586 9.81776L12.9416 15.2338C12.6975 15.4777 12.3019 15.4778 12.0578 15.2338C11.8141 14.9897 11.814 14.594 12.0578 14.35L17.0324 9.37538L12.0578 4.40077C11.814 4.15678 11.8141 3.76104 12.0578 3.51698Z" fill="#08872B" />
+                    </svg>
+                  </div>
+                  <span class="heading-size-4">Verificare il risultato</span>
+                  <svg class="accordion-arrow" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.44532 6.09258L0.13517 0.782424C-0.153564 0.493691 0.0509292 4.82077e-07 0.459261 4.64228e-07L11.0796 0C11.4879 -1.78487e-08 11.6924 0.493689 11.4037 0.782423L6.0935 6.09258C5.91451 6.27157 5.62431 6.27157 5.44532 6.09258Z" fill="#08872B" />
+                  </svg>
+                </div>
+              </button>
+
+              <div class="text-tab">
+                <p class="body-small">
+                  Il lavoro continua nel browser: controllo la leggibilità, i collegamenti e i controlli da tastiera a larghezze diverse. La prova pratica richiede di saper spiegare e modificare il codice.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -225,7 +294,7 @@
         <p class="cta-description">
           Esplora l'archivio completo del Dunk SB, dalle prime colorazioni universitarie ai modelli più rari e preziosi della storia dello skateboarding.
         </p>
-        <a href="#questa-pagina" class="button button-primary cta-button">Vai all'archivio</a>
+        <a href="#concept" class="button button-primary cta-button">Vai all'archivio</a>
       </div>
     </section>
   </main>

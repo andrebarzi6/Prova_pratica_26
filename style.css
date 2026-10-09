@@ -607,7 +607,7 @@ body {
     font-weight: 600;
 }
 
-/* --- CASE STUDY HEADER & SIDEBAR --- */
+/* --- CASE STUDY HEADER & SIDEBAR ("IN QUESTA STORIA") --- */
 .case-study-header {
     display: flex;
     flex-direction: column;
@@ -623,20 +623,49 @@ body {
 }
 
 .case-study-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-32);
     border-top: var(--border-width) solid var(--color-border-muted);
     padding-top: var(--spacing-24);
+}
+
+.sidebar-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .sidebar-title {
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 6px;
+    color: var(--color-black);
+    margin-bottom: 4px;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidebar-nav a {
+    color: var(--color-muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+    color: var(--color-black);
 }
 
 .sidebar-text {
     font-size: 14px;
     color: var(--color-muted);
-    margin-bottom: 8px;
 }
 
 .sidebar-link {
@@ -663,6 +692,10 @@ body {
         border-left: var(--border-width) solid var(--color-border-muted);
         padding-left: var(--spacing-32);
         text-align: right;
+    }
+
+    .sidebar-nav {
+        align-items: flex-end;
     }
 }
 
@@ -707,6 +740,11 @@ body {
         border-top: none;
         border-left: var(--border-width) solid var(--color-border-muted);
     }
+}
+
+/* --- SEZIONI VUOTE (SITEMAP, ASSETS, HIGHLIGHTS) --- */
+.empty-section-container {
+    min-height: 120px;
 }
 
 /* --- BREAKOUT TABS / ACCORDION MODULE --- */
@@ -886,4 +924,90 @@ body {
         flex-direction: row;
         justify-content: space-between;
     }
+}
+
+/* STILI CASE STUDY & BREAKOUT TABS (STRUTTURA INDEX_6.HTML) */
+.case-study-container {
+    padding: var(--spacing-64) var(--spacing-32);
+}
+
+.case-study-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-40) auto;
+}
+
+.case-study-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-32);
+}
+
+.tabs-images {
+    width: 100%;
+    text-align: center;
+}
+
+.tabs-image {
+    display: none;
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--color-border-muted);
+}
+
+.tabs-image.is-visible {
+    display: inline-block;
+}
+
+.tabs-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-24);
+}
+
+@media (min-width: 900px) {
+    .tabs-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.tab {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    width: 100%;
+}
+
+.tab-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.accordion-arrow {
+    display: none; /* Visibile su mobile se configurato come accordion */
+}
+
+.tab.is-selected .line rect {
+    fill: var(--color-accent);
+}
+
+.text-tab {
+    margin-top: 12px;
+}
+
+.body-small {
+    font-size: 14px;
+    color: var(--color-muted);
+    line-height: 1.5;
 }

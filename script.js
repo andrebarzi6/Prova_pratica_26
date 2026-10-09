@@ -103,3 +103,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.case-study .tab');
+  const images = document.querySelectorAll('.case-study .tabs-image');
+
+  tabs.forEach((tab, index) => {
+    const button = tab.querySelector('.tab-button');
+    if (!button) return;
+
+    button.addEventListener('click', () => {
+      // Disattiva tutte le tab e nascondi le immagini
+      tabs.forEach((t) => t.classList.remove('is-selected'));
+      images.forEach((img) => img.classList.remove('is-visible'));
+
+      // Attiva la tab e l'immagine corrispondente
+      tab.classList.add('is-selected');
+      if (images[index]) {
+        images[index].classList.add('is-visible');
+      }
+    });
+  });
+});
